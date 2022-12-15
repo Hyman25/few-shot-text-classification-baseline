@@ -1,3 +1,5 @@
+## 小样本数据分类baseline
+
 baseline原文地址：https://discussion.datafountain.cn/articles/detail/2513
 
 BERT模型：https://huggingface.co/hfl/chinese-roberta-wwm-ext, 下载pytorch_model.bin放到hfl文件夹下
@@ -12,3 +14,12 @@ data_helper.py line21：简单的文本复制增强，按需尝试。
 测试：test.py; 在config.py中更改加载的模型权重路径
 
 主要包：pytorch, transformers
+
+new_test.json测试结果：（这玩意儿有点波动，多跑几次结果又不一样）
+
+| 数据                    | 最好结果（f1_macro） |
+| ----------------------- | -------------------- |
+| new_train               | 0.6817               |
+| new_train_aug_trans     | 0.6909               |
+| new_train_aug_trans_eda | 0.6899               |
+
